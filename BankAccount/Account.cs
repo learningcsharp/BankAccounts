@@ -37,10 +37,7 @@ namespace BankAccount
         /// <returns>The Current Balance</returns>
         public decimal GetCurrentBalance()
         {
-            if (_Transactions.Count == 0)
-                return 0;
-            else
-                return _Transactions.Sum(x => x.Amount);
+            return _Transactions.Sum(x => x.Amount);
         }
 
         /// <summary>
