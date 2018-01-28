@@ -10,8 +10,8 @@ namespace BankAccount
 {
     public class Account : IAccount
     {
-        private List<ITransaction>  _Transactions { get; set; }
-        public string Name { get; protected set; }
+        private readonly List<ITransaction> _Transactions;
+        public string Name { get; private set; }
 
         public Account(string name)
         {
@@ -46,7 +46,7 @@ namespace BankAccount
         /// <summary>
         /// Represents the transactions held in the bank account, read-only status stops list being modified outside of this class.
         /// </summary>
-        public IReadOnlyCollection<ITransaction> Transactions { get { return _Transactions.AsReadOnly(); } }
+        public IReadOnlyCollection<ITransaction> Transactions { get { return _Transactions; } }
 
     }
 }
