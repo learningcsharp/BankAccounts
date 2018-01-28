@@ -9,7 +9,12 @@ namespace BankAccount
 {
     public struct Transaction : ITransaction
     {
-        public string Reference { get; set; }
-        public decimal Amount { get; set; }
+        public Transaction(string reference, decimal amount)
+        {
+            Reference = reference;
+            Amount = amount;
+        }
+        public string Reference { get; private set; }
+        public decimal Amount { get; private set; }
     }
 }

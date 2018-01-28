@@ -14,9 +14,9 @@ namespace BankAccountTests
             int expectedNumberOfTransactions = 3;
             Account bankAccount = new Account("TestAccount");
 
-            Transaction transaction1 = new Transaction() { Reference = "TEST", Amount = 1000 };
-            Transaction transaction2 = new Transaction() { Reference = "TEST", Amount = -800 };
-            Transaction transaction3 = new Transaction() { Reference = "TEST", Amount = 100 };
+            Transaction transaction1 = new Transaction("TEST", 1000);
+            Transaction transaction2 = new Transaction("TEST", -800);
+            Transaction transaction3 = new Transaction("TEST", 100);
 
             bankAccount.AddTransaction(transaction1);
             bankAccount.AddTransaction(transaction2);
@@ -49,7 +49,7 @@ namespace BankAccountTests
             //Arrange
             decimal expectedBalance = 100;
             Account bankAccount = new Account("TestAccount");
-            Transaction transaction = new Transaction() { Reference = "TEST", Amount = 100 };
+            Transaction transaction = new Transaction("TEST", 100);
             bankAccount.AddTransaction(transaction);
 
             //Act
@@ -66,9 +66,9 @@ namespace BankAccountTests
             decimal expectedBalance = 300;
             Account bankAccount = new Account("TestAccount");
 
-            Transaction transaction1 = new Transaction() { Reference = "TEST", Amount = 1000 };
-            Transaction transaction2 = new Transaction() { Reference = "TEST", Amount = -800 };
-            Transaction transaction3 = new Transaction() { Reference = "TEST", Amount =  100 };
+            Transaction transaction1 = new Transaction("TEST", 1000);
+            Transaction transaction2 = new Transaction("TEST", -800);
+            Transaction transaction3 = new Transaction("TEST", 100);
 
             bankAccount.AddTransaction(transaction1);
             bankAccount.AddTransaction(transaction2);
