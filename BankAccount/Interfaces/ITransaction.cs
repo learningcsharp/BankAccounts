@@ -8,7 +8,7 @@ namespace BankAccount.Interfaces
 {
    public interface ITransaction
     {
-        string Reference { get; set; }
-        decimal Amount { get; set; }
+        string Reference { get; }
+        decimal Amount { get; }
     }
 }
